@@ -1,60 +1,65 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
+  <v-app id="inspire">
+    <v-navigation-drawer
+        v-model="drawer"
+        app
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="text-h6">
+            Shopping Menu
+          </v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
+      <v-list
+          dense
+          nav
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+        <v-list-item
+            v-for="item in items"
+            :key="item.title"
+            link
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-app-bar app>
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+
+      <v-toolbar-title>Shopping</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <cart-modal></cart-modal>
     </v-app-bar>
 
-    <v-main>
-      <HelloWorld/>
-    </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import CartModal from './components/UI/CartModal'
 
 export default {
-  name: 'App',
-
   components: {
-    HelloWorld,
+    CartModal
   },
-
   data: () => ({
-    //
+    drawer: null,
+    items: [
+      {title: 'Products', icon: 'mdi-view-dashboard'},
+      {title: 'Shopping Cart', icon: 'shopping_cart'},
+    ],
   }),
-};
+}
 </script>
+
+<style>
+
+</style>
