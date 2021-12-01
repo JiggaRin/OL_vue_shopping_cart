@@ -1,40 +1,7 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer
-        v-model="drawer"
-        app
-    >
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="text-h6">
-            Shopping Menu
-          </v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-      <v-list
-          dense
-          nav
-      >
-        <v-list-item
-            v-for="item in items"
-            :key="item.title"
-            link
-        >
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
     <v-app-bar app>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-toolbar-title>Shopping</v-toolbar-title>
+      <v-toolbar-title>Keyboards</v-toolbar-title>
       <v-spacer></v-spacer>
       <cart-modal></cart-modal>
     </v-app-bar>
@@ -54,18 +21,12 @@ export default {
     ProductCarousel,
   },
   data: () => ({
-    drawer: null,
-    items: [
-      {title: 'Products', icon: 'mdi-view-dashboard'},
-      {title: 'Shopping Cart', icon: 'shopping_cart'},
-    ],
     products: [
       {
         id: 1,
         src: 'https://i.ebayimg.com/images/g/oK4AAOSw3~dgriCG/s-l1600.jpg',
         price: '$25.12',
         title: 'Gaming Keyboard USB Wired 61 Keys RGB LED Backlit for PS4 PC MAC Office Game',
-        model: 'V700',
         features: 'Ergonomic, RGB Backlit, ABS Floating Keycap, Enhanced Function Keys, Illuminated, Plug & Play, Portable'
       },
       {
@@ -73,8 +34,21 @@ export default {
         src: 'https://m.media-amazon.com/images/I/71z6gsI87bL._AC_SL1500_.jpg',
         price: '$29.99',
         title: 'Fiodio Rainbow Membrane Gaming Keyboard, Quiet Wired Computer Keyboard',
-        model: 'F260-8294',
         features: '104 Silent Keys, 26 Anti-Ghosting Keys, Spill Resistant, Multimedia Control for PC and Desktop'
+      },
+      {
+        id: 3,
+        src: 'https://resource.logitech.com/w_797,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/keyboards/k740/k740-feature-05.jpg?v=1',
+        price: '$59.99',
+        title: 'ILLUMINATED KEYBOARD K740',
+        features: 'The PerfectStroke key system distributes typing force evenly across the key surfaces making every keystroke quiet, natural and fluid—even if you strike the edge of a key.'
+      },
+      {
+        id: 4,
+        src: 'https://resource.logitech.com/w_797,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/keyboards/multi-keyboard-k380/k380-feature-06.jpg?v=1',
+        price: '$29.99',
+        title: 'K380 MULTI-DEVICE BLUETOOTH KEYBOARD',
+        features: 'Connect up to three devices—even with different operating systems— and switch between them with a tap. So you can type, switch, and keep on typing.'
       }
     ]
   }),
@@ -82,5 +56,4 @@ export default {
 </script>
 
 <style>
-
 </style>

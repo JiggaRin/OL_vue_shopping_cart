@@ -13,7 +13,7 @@
           <v-badge left color="green">
             <span slot="badge">5</span>
             <v-icon>shopping_cart</v-icon>
-            Shopping Cart
+            shopping basket
           </v-badge>
         </v-btn>
       </template>
