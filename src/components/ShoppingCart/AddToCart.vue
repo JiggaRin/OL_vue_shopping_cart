@@ -22,7 +22,7 @@ export default {
       this.$store.dispatch('addToCart', {
           id: this.product.id,
           title: this.product.title,
-          price: this.product.price,
+          price: this.product.price
       })
     }
   }

@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import CartModal from './components/UI/CartModal'
+import CartModal from './components/ShoppingCart/CartModal'
 import ProductCarousel from "./components/ProductCarousel";
 
 export default {

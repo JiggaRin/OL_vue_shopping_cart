@@ -1,7 +1,5 @@
 export default {
     state: {
-        chosenProduct: [],
-        cartCount: 0,
         products: [
             {
                 id: 1,

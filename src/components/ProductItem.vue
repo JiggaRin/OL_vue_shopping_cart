@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import AddToCart from "./UI/AddToCart";
+import AddToCart from "./ShoppingCart/AddToCart";
 import {mapGetters} from "vuex";
 
 export default {
