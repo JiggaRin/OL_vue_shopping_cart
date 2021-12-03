@@ -14,7 +14,7 @@
     </v-card-title>
 
     <v-card-subtitle class="price">
-      <p><strong>Price: {{ product.price }}</strong></p>
+      <p><strong>Price: $ {{ product.price }}</strong></p>
     </v-card-subtitle>
 
     <v-card-actions>

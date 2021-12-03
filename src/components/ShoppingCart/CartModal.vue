@@ -12,7 +12,7 @@
               v-on="on"
           >
             <v-badge left color="green">
-              <span slot="badge">5</span>
+              <span slot="badge">{{ getCartCount }}</span>
               <v-icon>shopping_cart</v-icon>
               Cart
             </v-badge>
@@ -21,13 +21,14 @@
         <template v-slot:default="dialog">
           <v-card>
             <v-toolbar
-                color="primary"
                 style="align-items: center"
                 dark
             >Your stuff
             </v-toolbar>
             <v-card-text>
+
               <chosen-products-list></chosen-products-list>
+
             </v-card-text>
             <v-card-actions class="justify-end">
               <v-btn
@@ -43,14 +44,14 @@
   </v-row>
 </template>
 <script>
+
 import ChosenProductsList from "./ChosenProductsList";
+import {mapGetters} from 'vuex'
 export default {
   components: {
     ChosenProductsList
   },
-  data: () => ({
-    dialog: false,
-  })
+  computed: {...mapGetters(['getCartCount'])}
 }
 
 </script>
