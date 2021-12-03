@@ -25,7 +25,7 @@ export default {
             {
                 id: 4,
                 src: 'https://resource.logitech.com/w_797,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/keyboards/multi-keyboard-k380/k380-feature-06.jpg?v=1',
-                price: 29.85,
+                price: 29.55,
                 title: 'K380 MULTI-DEVICE BLUETOOTH KEYBOARD',
                 features: 'Connect up to three devices—even with different operating systems— and switch between them with a tap. So you can type, switch, and keep on typing.'
             }
