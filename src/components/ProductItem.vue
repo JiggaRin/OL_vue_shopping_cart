@@ -18,15 +18,10 @@
     </v-card-subtitle>
 
     <v-card-actions>
-      <v-btn
-          color="orange lighten-2"
-          text
-      >
-        Add to cart
-      </v-btn>
+
+      <add-to-cart :product="product"></add-to-cart>
 
       <v-spacer></v-spacer>
-
       <v-btn
           icon
           @click="show = !show"
@@ -47,14 +42,18 @@
 </template>
 
 <script>
+import AddToCart from "./UI/AddToCart";
+
 export default {
+  components: {
+    AddToCart
+  },
   data: () => ({
     show: false,
   }),
   props: {
     product: {
       type: Object,
-      required: true,
     }
   }
 }

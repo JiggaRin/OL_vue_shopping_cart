@@ -4,8 +4,7 @@
         hide-delimiters
         height="auto"
     >
-      <v-carousel-item v-for="product in products"
-                       :product="product"
+      <v-carousel-item v-for="product in allProducts"
                        :key="product.id">
         <product-item :product="product"></product-item>
       </v-carousel-item>
@@ -15,17 +14,13 @@
 
 <script>
 import ProductItem from "./ProductItem";
+import {mapGetters} from 'vuex'
 
 export default {
   components: {
     ProductItem
   },
-  props: {
-    products: {
-      type: Array,
-      required: true,
-    }
-  }
+  computed: {...mapGetters(['allProducts'])}
 }
 </script>
 
