@@ -59,6 +59,9 @@ export default {
 </script>
 
 <style scoped>
+.removeBtn {
+  cursor: pointer;
+}
 .styled-table {
   border-collapse: collapse;
   margin: 25px 0;

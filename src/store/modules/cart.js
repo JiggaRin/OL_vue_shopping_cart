@@ -47,7 +47,7 @@ export default {
                 product.quantity--
                 state.cartCount--
             } else {
-                state.chosenProducts.splice(product, 1)
+                state.chosenProducts.splice(index, 1)
                 product.quantity--
                 state.cartCount--
             }
