@@ -3,7 +3,7 @@
     <v-btn
         color="red lighten-2"
         text
-        @click="addToCart()"
+        @click="getProductData(product)"
     >
       <v-icon>shopping_cart</v-icon>
       Add to cart
@@ -18,26 +18,14 @@ export default {
     product: Object
   },
   methods: {
-    addToCart() {
-      this.$store.dispatch('addProductToCart', {
-        product: this.product,
-        quantity: 1
+    getProductData() {
+      this.$store.dispatch('addToCart', {
+          id: this.product.id,
+          title: this.product.title,
+          price: this.product.price,
       })
     }
   }
-
-
-  // methods: {
-  //   addProduct() {
-  //     let userProduct = {
-  //       id: this.product.id,
-  //       title: this.product.title,
-  //       price: this.product.price
-  //     };
-  //     console.log(typeof userProduct)
-  //     return userProduct
-  //   }
-  // }
 }
 </script>
 

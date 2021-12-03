@@ -1,7 +1,7 @@
 export default {
-    actions: {},
-    mutations: {},
     state: {
+        chosenProduct: [],
+        cartCount: 0,
         products: [
             {
                 id: 1,

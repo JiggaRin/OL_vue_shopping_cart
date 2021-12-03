@@ -20,7 +20,8 @@ export default {
   components: {
     ProductItem
   },
-  computed: {...mapGetters(['allProducts'])}
+  computed: {...mapGetters(['allProducts']),
+  }
 }
 </script>
 

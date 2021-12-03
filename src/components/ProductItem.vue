@@ -19,7 +19,7 @@
 
     <v-card-actions>
 
-      <add-to-cart :product="product"></add-to-cart>
+      <add-to-cart :product="product" :key="product.id"></add-to-cart>
 
       <v-spacer></v-spacer>
       <v-btn
@@ -43,6 +43,7 @@
 
 <script>
 import AddToCart from "./UI/AddToCart";
+import {mapGetters} from "vuex";
 
 export default {
   components: {
@@ -55,7 +56,8 @@ export default {
     product: {
       type: Object,
     }
-  }
+  },
+  computed: {...mapGetters(['allProducts'])}
 }
 </script>
 
