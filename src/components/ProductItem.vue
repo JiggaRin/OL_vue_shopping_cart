@@ -62,7 +62,5 @@ export default {
 </script>
 
 <style scoped>
-.price {
-  margin-top: 1%;
-}
+
 </style>

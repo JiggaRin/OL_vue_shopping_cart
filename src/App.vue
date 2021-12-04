@@ -1,8 +1,7 @@
 <template>
   <v-app id="inspire">
-    <v-app-bar app>
+    <v-app-bar justify="space-between" app>
       <v-toolbar-title>Keyboards</v-toolbar-title>
-      <v-spacer></v-spacer>
       <cart-modal></cart-modal>
     </v-app-bar>
     <v-main>

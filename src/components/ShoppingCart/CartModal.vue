@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="space-around">
+  <v-row justify="end">
     <v-col cols="auto">
       <v-dialog
           transition="dialog-bottom-transition"
@@ -10,6 +10,7 @@
               dark
               v-bind="attrs"
               v-on="on"
+              class="cart-btn"
           >
             <v-badge left color="green">
               <span slot="badge">{{ getCartCount }}</span>
@@ -20,11 +21,13 @@
         </template>
         <template v-slot:default="dialog">
           <v-card>
-            <v-toolbar
-                style="align-items: center"
-                dark
-            >Your stuff
+            <v-spacer></v-spacer>
+            <v-toolbar dark>
+              <v-toolbar-title class="flex text-center">
+                Your stuff
+              </v-toolbar-title>
             </v-toolbar>
+            <v-spacer></v-spacer>
             <v-card-text>
 
               <chosen-products-list></chosen-products-list>
@@ -47,6 +50,7 @@
 
 import ChosenProductsList from "./ChosenProductsList";
 import {mapGetters} from 'vuex'
+
 export default {
   components: {
     ChosenProductsList
@@ -57,5 +61,7 @@ export default {
 </script>
 
 <style scoped>
-
+.modalHeader {
+  justify-content: center;
+}
 </style>
