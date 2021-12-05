@@ -54,18 +54,16 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
+import {mapGetters, mapActions} from 'vuex'
 
 export default {
   computed: {
     ...mapGetters(['chosenProductList', 'cartTotal']),
   },
   methods: {
-    removeProduct(item) {
-      this.$store.dispatch('removeProduct', item)
+    ...mapActions(['removeProduct'])
     }
   }
-}
 
 </script>
 
